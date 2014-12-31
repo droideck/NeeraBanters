@@ -2,7 +2,7 @@ The Neera Banters
 by AstroBryGuy (http://forum.baldursgate.com/profile/14405/AstroBryGuy)
 Version 0.1
 
-BThe Neera Banters - Version 0.1-2014-12-30
+The Neera Banters - Version 0.1-2014-12-30
 
 Do you wish Neera would interact more with her companions in BGEE?  Then this mod is for you!  The Neera Banters adds banters for Neera and several of the joinable NPCs.
 
