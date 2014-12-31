@@ -14,7 +14,7 @@ AUTHOR ~AstroBryGuy, ~
 
 VERSION ~v0.1-20141230~
 
-README ~neerabanters/readme-neerabanters.html~
+README ~neerabanters/readme.txt~
 
 BEGIN ~Neera Expansion~
   REQUIRE_PREDICATE GAME_IS ~bgee~ ~You must have Baldur's Gate: Enhanced Edition installed.~
