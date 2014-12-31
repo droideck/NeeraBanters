@@ -10,11 +10,11 @@ BACKUP ~neerabanters/backup~
 AUTHOR ~AstroBryGuy, ~
 
 /* enable all error messages; nothing suppressed. comment this out for release version */
-MODDER
+//MODDER
 
 VERSION ~v0.1-20141230~
 
-//README ~neerabanters/readme-neerabanters.html~
+README ~neerabanters/readme-neerabanters.html~
 
 BEGIN ~Neera Expansion~
   REQUIRE_PREDICATE GAME_IS ~bgee~ ~You must have Baldur's Gate: Enhanced Edition installed.~
