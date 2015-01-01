@@ -1,7 +1,7 @@
 /*
  * "The Neera Banters" for BGEE
  * AstroBryGuy
- * 2014-12-30
+ * 2014-12-31
 */
 
 /* Backup folder */
@@ -12,7 +12,7 @@ AUTHOR ~AstroBryGuy, ~
 /* enable all error messages; nothing suppressed. comment this out for release version */
 //MODDER
 
-VERSION ~v0.1-20141230~
+VERSION ~v0.1.1-20141231~
 
 README ~neerabanters/readme.txt~
 
