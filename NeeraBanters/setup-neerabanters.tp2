@@ -16,7 +16,7 @@ VERSION ~v0.1.1-20141231~
 
 README ~neerabanters/readme.txt~
 
-BEGIN ~Neera Expansion~
+BEGIN ~Neera Banters~
   REQUIRE_PREDICATE GAME_IS ~bgee~ ~You must have Baldur's Gate: Enhanced Edition installed.~
 
 /* STATE.IDS patching - thanks, Cam, if you read it */
