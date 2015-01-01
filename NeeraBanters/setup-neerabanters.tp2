@@ -19,9 +19,9 @@ README ~neerabanters/readme.txt~
 BEGIN ~Neera Expansion~
   REQUIRE_PREDICATE GAME_IS ~bgee~ ~You must have Baldur's Gate: Enhanced Edition installed.~
 
-  /* STATE.IDS patching to ToB - thanks, Cam, if you read it */
-  /* adds custom IsValidForPartyDialogue state */
-  APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+/* STATE.IDS patching - thanks, Cam, if you read it */
+/* adds custom IsValidForPartyDialogue state */
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 
 // Compile dialogues
 COMPILE EVALUATE_BUFFER ~neerabanters/d/ay#bneera.d~

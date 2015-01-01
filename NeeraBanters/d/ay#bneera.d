@@ -108,7 +108,7 @@ EXIT
 
 //Neera-Imoen 2?
 
-CHAIN IF WEIGHT #-1 ~CombatCounter(0) InParty("imoen") Global("AY#NeIm3","LOCALS",0) !See([ENEMY]) See("imoen") !StateCheck(Myself,CD_STATE_NOTVALID) !StateCheck("imoen",CD_STATE_NOTVALID)~ THEN NEERAJ NeIm3Chain ~Imoen, when you left Candlekeep, is this what you were expecting from the life of an adventurer?~ DO ~SetGlobal("AY#NeIm3","LOCALS",1)~
+CHAIN IF WEIGHT #-1 ~CombatCounter(0) InParty("imoen") Global("AY#NeIm3","LOCALS",0) !See([ENEMY]) See("imoen") !StateCheck(Myself,CD_STATE_NOTVALID) !StateCheck("imoen",CD_STATE_NOTVALID)~ THEN BNEERA NeIm3Chain ~Imoen, when you left Candlekeep, is this what you were expecting from the life of an adventurer?~ DO ~SetGlobal("AY#NeIm3","LOCALS",1)~
 == BNEERA ~Imoen, when you left Candlekeep, is this what you were expecting from the life of an adventurer?~
 == BIMOEN ~What?  You mean trekkin' up and down the Sword Coast, fighting’ bandits and goblins, runnin' errands for strangers?~
 == BNEERA ~Yeah, is this what you thought an adventurer's life would be?~
