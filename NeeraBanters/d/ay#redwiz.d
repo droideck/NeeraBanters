@@ -1,36 +1,36 @@
 /* Interjections on Edwin's joining dialogue.  Interjects on states 0, 1, 2, 9, 14, 21 */
 INTERJECT_COPY_TRANS EDWIN 0 AY#NeeraEdwinICT0
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! Will you assist me in hunting the witch Dynaheir?~
 END
 
 INTERJECT_COPY_TRANS EDWIN 1 AY#NeeraEdwinICT1
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! Will you assist me in hunting the witch Dynaheir?~
 END
 
 INTERJECT_COPY_TRANS EDWIN 2 AY#NeeraEdwinICT2
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! Will you assist me in hunting the witch Dynaheir?~
 END
 
 INTERJECT_COPY_TRANS EDWIN 9 AY#NeeraEdwinICT9
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! What say you to my proposal?~
 END
 
 INTERJECT_COPY_TRANS EDWIN 14 AY#NeeraEdwinICT14
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! What say you to my proposal?~
 END
 
 INTERJECT_COPY_TRANS EDWIN 21 AY#NeeraEdwinICT21
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way am I going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! What say you to my proposal?~
 END
 
 INTERJECT_COPY_TRANS EDWINP 0 AY#NeeraEdwinPICT0
-== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. There is no way I am going to be in a party with a Red Wizard! It's him or me!~
+== NEERAJ   IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Um, excuse me, <CHARNAME>, but that creep is a Red Wizard. No WAY am I going to be in a party with a Red Wizard! It's him or me!~
 == EDWIN    IF ~InParty("neera") InMyArea("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Pay no attention to that disreputable-looking urchin! Shall we resume our association?~
 END
 
