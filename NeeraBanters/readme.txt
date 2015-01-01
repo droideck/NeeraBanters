@@ -1,8 +1,10 @@
 The Neera Banters
 by AstroBryGuy (http://forum.baldursgate.com/profile/14405/AstroBryGuy)
-Version 0.1
+Version 0.1.2
 
-The Neera Banters - Version 0.1-2014-12-30
+The Neera Banters - Version 0.1.2-20150101
+
+
 
 Do you wish Neera would interact more with her companions in BGEE?  Then this mod is for you!  The Neera Banters adds banters for Neera and several of the joinable NPCs.
 
@@ -10,9 +12,8 @@ It is my intention to give Neera at least 1 banter with all of the joinable NPCs
 
 Banters are currently available with Branwen, Coran, Dynaheir, Faldorn, Imoen, Jaheira, Khalid, Minsc, Montaron, Xan, and Xzar.  More will be added in future releases, and content suggestions are welcome!
 
-OPTIONS
 
-None at this time.
+
 
 INSTALLATION
 
@@ -67,4 +68,6 @@ This mod is not developed, supported, or endorsed by BioWare, Black Isle Studios
 
 HISTORY
 
+Version 0.1.2: Fixing typos
+Version 0.1.1: Bugfix release
 Version 0.1: Initial public release
