@@ -210,22 +210,22 @@ CHAIN IF WEIGHT #-1 ~Global("AY#NEERABOO","GLOBAL",2) InParty("minsc") See("mins
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("AY#NEMI1","LOCALS",0) GlobalGT("NEERA_PLOT","GLOBAL",0) InParty("minsc") See("minsc") !StateCheck("minsc",CD_STATE_NOTVALID) !StateCheck(Myself,CD_STATE_NOTVALID) CombatCounter(0) !See([ENEMY]) AreaType(OUTDOOR) !AreaType(CITY) TimeOfDay(NIGHT)~ THEN BNEERA NeMi1Chain ~What was that noise?~ DO ~SetGlobal("AY#NEMI1","LOCALS",1)~
-== BMINSC ~That? It sounds like an animal in the night. Nothing to worry about - for you. But Boo must be careful, or he could become a wolf's midnight snack!~
-== BNEERA ~Whew! That's good.~
+== BMINSC ~That? Boo says it is just sounds of an animal in the night. Nothing to worry about - for you. But Boo must be careful, or he could become a wolf's midnight snack!~
+== BNEERA ~Whew! That's good... er, well, for me.~
 == BMINSC ~Why do these sounds frighten you, Neera? Boo says you were raised in High Forest. You should know the sounds of the wild.~
-== BNEERA ~I was and I do, but when you've been on the run as long as I have, you tend to get a little jumpy.~
+== BNEERA ~I was, and I do. But when you've been on the run as long as I have, you tend to get a little jumpy.~
 == BMINSC ~Then you can stop jumping, Neera. With Minsc and Boo here, there will be swift butt-kickings to any who try to harm you!~
-== BNEERA ~Good to know, Minsc.~
+== BNEERA ~Thanks, Minsc. I feel safer already.~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("AY#NEMI2","LOCALS",0) InParty("neera") See("neera") !StateCheck("neera",CD_STATE_NOTVALID) !StateCheck(Myself,CD_STATE_NOTVALID) CombatCounter(0) !See([ENEMY])~ THEN BMINSC NeMi2Chain ~Neera, Boo is worried about you. He thinks you need a protector.~ DO ~SetGlobal("AY#NEMI2","LOCALS",1)~
 == BNEERA ~Really? A protector? I don't suppose you're offering to be my sworn guardian?~
 == BMINSC IF ~!Dead("dynaheir")~ THEN ~Minsc and Boo are sworn to protect Dynaheir. We can only swear to one witch at a time. You should find another who can be your protector.~ 
 == BMINSC IF ~Dead("dynaheir")~ THEN ~Dynaheir is gone, but it is... too soon for Minsc and Boo to find a new witch. You should find another who can be your protector.~ 
-== BNEERA ~In that case, any suggestions from you or the rodent?~
+== BNEERA ~In that case, do you, uh, or Boo have any suggestions?~
 == BMINSC IF ~OR(3) Class(Player1,FIGHTER_ALL) Class(Player1,RANGER_ALL) Class(Player1,PALADIN)~ THEN ~Boo thinks <CHARNAME> would be a good protector for you, Neera.~
-== BNEERA IF ~OR(3) Class(Player1,FIGHTER_ALL) Class(Player1,RANGER_ALL) Class(Player1,PALADIN)~ THEN ~That's an... interesting idea, Minsc.~
-== BMINSC IF ~!Class(Player1,FIGHTER_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN)~ THEN ~Boo will have to think about that, Neera.~
+== BNEERA IF ~OR(3) Class(Player1,FIGHTER_ALL) Class(Player1,RANGER_ALL) Class(Player1,PALADIN)~ THEN ~That's... an interesting idea, Minsc.~
+== BMINSC IF ~!Class(Player1,FIGHTER_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN)~ THEN ~Hmmm... Boo will have to think about that, Neera.~
 == BNEERA IF ~!Class(Player1,FIGHTER_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN)~ THEN ~Uh, yeah. Let me know if Boo comes up with anything, Minsc.~
 == BMINSC ~Boo says you are welcome, Neera!~
 EXIT
@@ -242,11 +242,11 @@ CHAIN IF WEIGHT #-1 ~Global("AY#NEMO1","LOCALS",0) InParty("montaron") See("mont
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("AY#NEMO2","LOCALS",0) InParty("montaron") See("montaron") !StateCheck(Myself,CD_STATE_NOTVALID) !StateCheck("montaron",CD_STATE_NOTVALID) CombatCounter(0) !See([ENEMY]) AreaType(DUNGEON)~ THEN BNEERA NeMo2Chain ~This place gives me the creeps.~ DO ~SetGlobal("AY#NEMO2","LOCALS",1)~
-== BMONTA ~Will ye shut yer yap, ye peevish rug-haired witch!?!  Every creature in this damned 'ole will be on to us with all the racket ye're makin'!~
-== BNEERA ~Hey, give me a break.  I'm still new at this adventuring thing.~
-== BMONTA ~There are two kinds of adventurers, missy.  Smart ones an' dead ones.  I ain't gonna be the latter.  Which do ye want to be?~
+== BMONTA ~Will ye shut yer yap, ye peevish rug-haired witch!?! Every creature in this damned hole will be on to us with all the racket ye're makin'!~
+== BNEERA ~Hey, give me a break. I'm still new at this adventuring thing.~
+== BMONTA ~There be two kinds of adventurers, missy. Smart ones an' dead ones.  I ain't gonna be the latter. Which do ye want to be?~
 == BNEERA ~Yeah, I'll go with not dead.~
-== BMONTA ~We'll see.  We'll see.~
+== BMONTA ~We'll see. We'll see.~
 EXIT
 
 
