@@ -1,5 +1,6 @@
 /* Neera-Edwin Conflict */
 IF
+	%BGT_VAR%
 	InParty(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID) 
 	InParty("edwin")
@@ -15,6 +16,7 @@ END
 /* Neera-Imoen Stars Talk */
 /* Initiate timer - 5 days until checks start */
 IF 
+	%BGT_VAR%
 	Global("AY#NeImStars","GLOBAL",0)
 	InParty(Myself) 
 	InParty("imoen") 
@@ -27,6 +29,7 @@ END
 
 /* If conditions are right, 10% chance to fire dialog, set weather to clear */
 IF 
+	%BGT_VAR%
 	Global("AY#NeImStars","GLOBAL",1)
 	GlobalTimerExpired("AY#NeImStarsTimer","GLOBAL")
 	InParty(Myself) 
@@ -39,10 +42,8 @@ IF
 	TimeOfDay(NIGHT)
 	!AreaType(DUNGEON)
 	!AreaType(CITY)
-	OR(3)
-  		AreaType(OUTDOOR)
-  		AreaType(WEATHER)
-  		AreaType(FOREST)
+  	AreaType(OUTDOOR)
+  	AreaType(WEATHER)
 THEN 
   RESPONSE #10
     SetGlobal("AY#NeImStars","GLOBAL",2)
@@ -54,6 +55,7 @@ END
 
 /* Fire dialog */
 IF 
+	%BGT_VAR%
 	Global("AY#NeImStars","GLOBAL",2)
 	GlobalTimerExpired("AY#NeImStarsWeather","GLOBAL")
 	InParty(Myself) 
@@ -66,10 +68,8 @@ IF
 	TimeOfDay(NIGHT)
 	!AreaType(DUNGEON)
 	!AreaType(CITY)
-	OR(3)
-		AreaType(OUTDOOR)
-		AreaType(WEATHER)
-		AreaType(FOREST)
+  	AreaType(OUTDOOR)
+  	AreaType(WEATHER)
 THEN
 	RESPONSE #100
 		SetGlobal("AY#NeImStars","GLOBAL",3)
@@ -80,6 +80,7 @@ END
 /* Neera-Skie Rain Talk */
 /* Initiate timer - 3 days until checks start */
 IF 
+	%BGT_VAR%
 	Global("AY#NeSkRain","GLOBAL",0)
 	InParty(Myself) 
 	InParty("skie") 
@@ -92,106 +93,108 @@ END
 
 /* If conditions are right, 10% chance of dialog firing - set weather to rain */
 IF 
-Global("AY#NeSkRain","GLOBAL",1)
-GlobalTimerExpired("AY#NeSkRainTimer","GLOBAL")
-InParty(Myself) 
-!StateCheck(Myself,CD_STATE_NOTVALID) 
-InParty("skie") 
-See("skie") 
-!StateCheck("skie",CD_STATE_NOTVALID)
-CombatCounter(0) 
-!See([ENEMY]) 
-!AreaType(DUNGEON)
-!AreaType(CITY)
-OR(3)
-  AreaType(OUTDOOR)
-  AreaType(WEATHER)
-  AreaType(FOREST)
+	%BGT_VAR%
+	Global("AY#NeSkRain","GLOBAL",1)
+	GlobalTimerExpired("AY#NeSkRainTimer","GLOBAL")
+	InParty(Myself) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	InParty("skie") 
+	See("skie") 
+	!StateCheck("skie",CD_STATE_NOTVALID)
+	CombatCounter(0) 
+	!See([ENEMY]) 
+	!AreaType(DUNGEON)
+	!AreaType(CITY)
+	AreaType(OUTDOOR)
+	AreaType(WEATHER)
 THEN 
-  RESPONSE #10
-    SetGlobal("AY#NeSkRain","GLOBAL",2)
-    Weather(RAIN)
-    SetGlobalTimer("AY#NeSkRainWeather","GLOBAL",10)
-  RESPONSE #90
-    SetGlobalTimer("AY#NeSkRainTimer","GLOBAL",1200)
+	RESPONSE #10
+    	SetGlobal("AY#NeSkRain","GLOBAL",2)
+    	Weather(RAIN)
+    	SetGlobalTimer("AY#NeSkRainWeather","GLOBAL",10)
+  	RESPONSE #90
+    	SetGlobalTimer("AY#NeSkRainTimer","GLOBAL",1200)
 END
 
 /* Fire dialog */
 IF 
-Global("AY#NeSkRain","GLOBAL",2)
-GlobalTimerExpired("AY#NeSkRainWeather","GLOBAL")
-InParty(Myself) 
-!StateCheck(Myself,CD_STATE_NOTVALID) 
-InParty("skie") 
-See("skie") 
-!StateCheck("skie",CD_STATE_NOTVALID)
-CombatCounter(0) 
-!See([ENEMY]) 
-!AreaType(DUNGEON)
-!AreaType(CITY)
-OR(3)
-  AreaType(OUTDOOR)
-  AreaType(WEATHER)
-  AreaType(FOREST)
+	%BGT_VAR%
+	Global("AY#NeSkRain","GLOBAL",2)
+	GlobalTimerExpired("AY#NeSkRainWeather","GLOBAL")
+	InParty(Myself) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	InParty("skie") 
+	See("skie") 
+	!StateCheck("skie",CD_STATE_NOTVALID)
+	CombatCounter(0) 
+	!See([ENEMY]) 
+	!AreaType(DUNGEON)
+	!AreaType(CITY)
+  	AreaType(OUTDOOR)
+  	AreaType(WEATHER)
 THEN
-  RESPONSE #100
-    SetGlobal("AY#NeSkRain","GLOBAL",3)
-    StartDialogueNoSet("skie")
+  	RESPONSE #100
+    	SetGlobal("AY#NeSkRain","GLOBAL",3)
+    	StartDialogueNoSet("skie")
 END
 
 /* Neera-Dynaheir Post Adoy-Red Wizard Battle Dialog */
 IF 
-Global("AdoyLeft","OH2010",3)
-Global("AY#NeDyRedWiz","LOCALS",0)
-InParty(Myself) 
-!StateCheck(Myself,CD_STATE_NOTVALID) 
-InParty("dynaheir") 
-AreaCheck("OH2010")
+	%BGT_VAR%
+	Global("AdoyLeft","OH2010",3)
+	Global("AY#NeDyRedWiz","GLOBAL",0)
+	InParty(Myself) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	InParty("dynaheir") 
+	AreaCheck("OH2010")
 THEN
-  RESPONSE #100
-	SetGlobal("AY#NeDyRedWiz","LOCALS",1)
+	RESPONSE #100
+		SetGlobal("AY#NeDyRedWiz","GLOBAL",1)
 END
 
 IF 
-Global("AdoyLeft","OH2010",3)
-Global("AY#NeDyRedWiz","LOCALS",0)
-InParty(Myself) 
-!InParty("dynaheir") 
-AreaCheck("OH2010")
+	%BGT_VAR%
+	Global("AdoyLeft","OH2010",3)
+	Global("AY#NeDyRedWiz","GLOBAL",0)
+	InParty(Myself) 
+	!InParty("dynaheir") 
+	AreaCheck("OH2010")
 THEN
-  RESPONSE #100
-	SetGlobal("AY#NeDyRedWiz","LOCALS",5)
+	RESPONSE #100
+		SetGlobal("AY#NeDyRedWiz","GLOBAL",5)
 END
 
 IF 
-Global("AY#NeDyRedWiz","LOCALS",1)
-InParty(Myself) 
-!StateCheck(Myself,CD_STATE_NOTVALID) 
-InParty("dynaheir") 
-See("dynaheir") 
-!StateCheck("dynaheir",CD_STATE_NOTVALID)
-CombatCounter(0) 
-!See([ENEMY]) 
-AreaCheck("OH2000")
+	%BGT_VAR%
+	Global("AY#NeDyRedWiz","GLOBAL",1)
+	InParty(Myself) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	InParty("dynaheir") 
+	See("dynaheir") 
+	!StateCheck("dynaheir",CD_STATE_NOTVALID)
+	CombatCounter(0) 
+	!See([ENEMY]) 
+	AreaCheck("OH2000")
 THEN
-  RESPONSE #100
-	SetGlobal("AY#NeDyRedWiz","LOCALS",2)
-	StartDialogueNoSet("dynaheir")
+	RESPONSE #100
+		SetGlobal("AY#NeDyRedWiz","GLOBAL",2)
+		StartDialogueNoSet("dynaheir")
 END
 
 /* Neera-Boo Dialog */
 IF
-Global("AY#NEERABOO","GLOBAL",1) 
-GlobalTimerExpired("AY#NEERABOOTIMER","GLOBAL")
-InParty(Myself) 
-!StateCheck(Myself,CD_STATE_NOTVALID) 
-InParty("minsc") 
-See("minsc") 
-!StateCheck("minsc",CD_STATE_NOTVALID)
-CombatCounter(0) 
-!See([ENEMY]) 
+	%BGT_VAR%
+	Global("AY#NEERABOO","GLOBAL",1) 
+	GlobalTimerExpired("AY#NEERABOOTIMER","GLOBAL")
+	InParty(Myself) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	InParty("minsc") 
+	See("minsc") 
+	!StateCheck("minsc",CD_STATE_NOTVALID)
+	CombatCounter(0) 
+	!See([ENEMY]) 
 THEN
-  RESPONSE #100
-	SetGlobal("AY#NEERABOO","GLOBAL",2)
-    StartDialogueNoSet("minsc")
+	RESPONSE #100
+		SetGlobal("AY#NEERABOO","GLOBAL",2)
+    	StartDialogueNoSet("minsc")
 END

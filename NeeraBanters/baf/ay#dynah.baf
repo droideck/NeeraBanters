@@ -1,0 +1,17 @@
+/* Neera-Dynaheir Frixis Dialog */
+IF
+	%BGT_VAR%
+	Global("AY#NEDY1","GLOBAL",1) 
+	GlobalTimerExpired("AY#NeDy2Timer","GLOBAL") 
+	InParty(Myself) 
+	InParty("neera") 
+	See("neera") 
+	!StateCheck("neera",CD_STATE_NOTVALID) 
+	!StateCheck(Myself,CD_STATE_NOTVALID) 
+	CombatCounter(0) 
+	!See([ENEMY])
+THEN
+	RESPONSE #100
+		SetGlobal("AY#NEDY1","GLOBAL",2)
+		StartDialogueNoSet(Player1)
+END
