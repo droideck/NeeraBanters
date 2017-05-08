@@ -19,24 +19,24 @@ IF
 	%BGT_VAR%
 	Global("AY#NeImStars","GLOBAL",0)
 	InParty(Myself) 
-	InParty("imoen") 
-	!Dead("imoen")
+	InParty("%IMOEN_DV%") 
+	!Dead("%IMOEN_DV%")
 THEN 
   RESPONSE #100
     SetGlobal("AY#NeImStars","GLOBAL",1)
     SetGlobalTimer("AY#NeImStarsTimer","GLOBAL",FIVE_DAYS)
 END
 
-/* If conditions are right, 10% chance to fire dialog, set weather to clear */
+/* If conditions are right, 25% chance to fire dialog, set weather to clear */
 IF 
 	%BGT_VAR%
 	Global("AY#NeImStars","GLOBAL",1)
 	GlobalTimerExpired("AY#NeImStarsTimer","GLOBAL")
 	InParty(Myself) 
 	!StateCheck(Myself,CD_STATE_NOTVALID) 
-	InParty("imoen") 
-	See("imoen") 
-	!StateCheck("imoen",CD_STATE_NOTVALID)
+	InParty("%IMOEN_DV%") 
+	See("%IMOEN_DV%") 
+	!StateCheck("%IMOEN_DV%",CD_STATE_NOTVALID)
 	CombatCounter(0) 
 	!See([ENEMY]) 
 	TimeOfDay(NIGHT)
@@ -45,11 +45,11 @@ IF
   	AreaType(OUTDOOR)
   	AreaType(WEATHER)
 THEN 
-  RESPONSE #10
+  RESPONSE #25
     SetGlobal("AY#NeImStars","GLOBAL",2)
     Weather(NOWEATHER)
     SetGlobalTimer("AY#NeImStarsWeather","GLOBAL",10)
-  RESPONSE #90
+  RESPONSE #75
     SetGlobalTimer("AY#NeImStarsTimer","GLOBAL",1200)
 END
 
@@ -60,9 +60,9 @@ IF
 	GlobalTimerExpired("AY#NeImStarsWeather","GLOBAL")
 	InParty(Myself) 
 	!StateCheck(Myself,CD_STATE_NOTVALID) 
-	InParty("imoen") 
-	See("imoen") 
-	!StateCheck("imoen",CD_STATE_NOTVALID)
+	InParty("%IMOEN_DV%") 
+	See("%IMOEN_DV%") 
+	!StateCheck("%IMOEN_DV%",CD_STATE_NOTVALID)
 	CombatCounter(0) 
 	!See([ENEMY]) 
 	TimeOfDay(NIGHT)
@@ -73,7 +73,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("AY#NeImStars","GLOBAL",3)
-		StartDialogueNoSet("imoen")
+		StartDialogueNoSet("%IMOEN_DV%")
 END
 
 
@@ -91,7 +91,7 @@ THEN
     	SetGlobalTimer("AY#NeSkRainTimer","GLOBAL",THREE_DAYS)
 END
 
-/* If conditions are right, 10% chance of dialog firing - set weather to rain */
+/* If conditions are right, 25% chance of dialog firing - set weather to rain */
 IF 
 	%BGT_VAR%
 	Global("AY#NeSkRain","GLOBAL",1)
@@ -108,11 +108,11 @@ IF
 	AreaType(OUTDOOR)
 	AreaType(WEATHER)
 THEN 
-	RESPONSE #10
+	RESPONSE #25
     	SetGlobal("AY#NeSkRain","GLOBAL",2)
     	Weather(RAIN)
     	SetGlobalTimer("AY#NeSkRainWeather","GLOBAL",10)
-  	RESPONSE #90
+  	RESPONSE #75
     	SetGlobalTimer("AY#NeSkRainTimer","GLOBAL",1200)
 END
 
