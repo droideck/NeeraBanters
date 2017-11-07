@@ -62,6 +62,11 @@ All images, sounds, and game text used by this mod are copyright Beamdog or Wiza
 
 ## Version History
 
+Version 0.9.1
+
+* Fixing parse error with sounds removal script.
+* Fixing COPY error for DLC portrait under Windows.
+
 Version 0.9
 
 * Adding banters for (almost) all NPCs
