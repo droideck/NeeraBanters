@@ -12,7 +12,7 @@ AUTHOR ~AstroBryGuy~
 /* enable all error messages; nothing suppressed. comment this out for release version */
 //MODDER
 
-VERSION ~v0.9~
+VERSION ~v0.9.1~
 
 README ~neerabanters/readme.html~
 
@@ -92,7 +92,7 @@ END
 ACTION_IF GAME_INCLUDES ~sod~ BEGIN
 	COPY_EXISTING ~bdneera.bcs~ ~override~
 		DECOMPILE_AND_PATCH BEGIN
-			REPLACE_TEXTUALLY ~SetGlobal("bd_NewSounds","LOCALS",1)~ ~SetPlayerSound(Myself,-1,INSULT) SetPlayerSound(Myself,-1,COMPLIMENT1) SetPlayerSound(Myself,-1,RESPONSE_TO_INSULT1) SetPlayerSound(Myself,-1,RESPONSE_TO_INSULT2) SetPlayerSound(Myself,-1,MISCELLANEOUS) SetPlayerSound(Myself,-1,RESPONSE_TO_COMPLIMENT2) SetGlobal("bd_NewSounds","LOCALS",1)~
+			REPLACE_TEXTUALLY ~SetGlobal("bd_NewSounds","LOCALS",1)~ ~SetPlayerSound(Myself,-1,INSULT1) SetPlayerSound(Myself,-1,COMPLIMENT1) SetPlayerSound(Myself,-1,RESPONSE_TO_INSULT1) SetPlayerSound(Myself,-1,RESPONSE_TO_INSULT2) SetPlayerSound(Myself,-1,MISCELLANEOUS) SetPlayerSound(Myself,-1,RESPONSE_TO_COMPLIMENT2) SetGlobal("bd_NewSounds","LOCALS",1)~
 		END
 	BUT_ONLY
 END
@@ -248,7 +248,7 @@ BUT_ONLY
 BEGIN @3 DESIGNATED 30
   REQUIRE_PREDICATE GAME_IS ~bgee eet~ @0
 
-COPY ~neerabanters/bmp/~ ~override~
+COPY ~neerabanters/bmp~ ~override~
 
 ACTION_FOR_EACH neera IN neera neera2 neera4 neera6 neera7 neera8 neera10 neera12 neera13 neera15 ohb1neer BEGIN
 	ACTION_IF FILE_EXISTS_IN_GAME "%neera%.cre" BEGIN

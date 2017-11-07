@@ -5,3 +5,4 @@ package_mod.sh
 *.zip
 setup-neerabanters
 setup-neerabanters.exe
+.DS_Store
