@@ -2,7 +2,7 @@
 
 A Baldur's Gate mod by AstroBryGuy
 
-**Version 0.9**
+**Version 0.9.1**
 
 [https://github.com/AstroBryGuy/NeeraBanters](https://github.com/AstroBryGuy/NeeraBanters)
 
