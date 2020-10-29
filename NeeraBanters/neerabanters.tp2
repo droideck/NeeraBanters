@@ -244,18 +244,38 @@ COPY_EXISTING ~interact.2da~ ~override~
 	LPM remove_blank_lines
 BUT_ONLY
 
+/* Neera Banters: DLC Portraits */
+/* DLC Portrait #1 */
+BEGIN @4 DESIGNATED 30
+	SUBCOMPONENT @3  /* Neera Banters: DLC Portraits */
+  	REQUIRE_PREDICATE GAME_IS ~bgee eet~ @0
 
-BEGIN @3 DESIGNATED 30
-  REQUIRE_PREDICATE GAME_IS ~bgee eet~ @0
-
-COPY ~neerabanters/bmp~ ~override~
+COPY GLOB ~neerabanters/bmp/ay#ne1*.bmp~ ~override~
 
 ACTION_FOR_EACH neera IN neera neera2 neera4 neera6 neera7 neera8 neera10 neera12 neera13 neera15 ohb1neer BEGIN
 	ACTION_IF FILE_EXISTS_IN_GAME "%neera%.cre" BEGIN
 		COPY_EXISTING ~%neera%.CRE~ ~override~
       		PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN // protects against invalid files
-        		WRITE_ASCIIE 0x34 ~ay#nem~ #8 // small portrait
-        		WRITE_ASCIIE 0x3c ~ay#nel~ #8 // large portrait
+        		WRITE_ASCIIE 0x34 ~ay#ne1m~ #8 // small portrait
+        		WRITE_ASCIIE 0x3c ~ay#ne1l~ #8 // large portrait
+        	END
+        BUT_ONLY
+    END
+END
+
+/* DLC Portrait #2 */
+BEGIN @5 DESIGNATED 31
+	SUBCOMPONENT @3  /* Neera Banters: DLC Portraits */
+  	REQUIRE_PREDICATE GAME_IS ~bgee eet~ @0
+
+COPY GLOB ~neerabanters/bmp/ay#ne2*.bmp~ ~override~
+
+ACTION_FOR_EACH neera IN neera neera2 neera4 neera6 neera7 neera8 neera10 neera12 neera13 neera15 ohb1neer BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME "%neera%.cre" BEGIN
+		COPY_EXISTING ~%neera%.CRE~ ~override~
+      		PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN // protects against invalid files
+        		WRITE_ASCIIE 0x34 ~ay#ne2m~ #8 // small portrait
+        		WRITE_ASCIIE 0x3c ~ay#ne2l~ #8 // large portrait
         	END
         BUT_ONLY
     END
