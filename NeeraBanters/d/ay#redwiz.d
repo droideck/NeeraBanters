@@ -38,7 +38,7 @@ END
 APPEND %NEERA_JOINED%
 	IF WEIGHT #-2 ~GLOBAL("AY#NeeraEdwinInParty","Global",1)~ THEN BEGIN AY#NeeraEdwinConflict
 		SAY @4 /* I told you, I will NOT travel with a Red Wizard!  When you come to your senses, I'll be at the Friendly Arm Inn. */
-	IF ~~ THEN DO ~SetGlobal("AYNeeraEdwinInParty","Global",0) SetGlobal("KickedOut","LOCALS",1) SetGlobal("NEERAPARTY","GLOBAL",0) LeaveParty() EscapeAreaMove("AR2301",755,390,SW)~ EXIT
+	IF ~~ THEN DO ~SetGlobal("AY#NeeraEdwinInParty","Global",0) SetGlobal("KickedOut","LOCALS",1) SetGlobal("NEERAPARTY","GLOBAL",0) LeaveParty() EscapeAreaMove("AR2301",755,390,SW)~ EXIT
 	END
 END
 
